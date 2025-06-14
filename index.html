@@ -1,0 +1,90 @@
+<!DOCTYPE html><html data-bs-theme="dark" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>ICMT</title><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=7fdedab8041cc4b4b97c9f2701f4bd23"><link rel="stylesheet" href="assets/css/styles.min.css?h=f491c94253f6b87a16dcaa31200a5c57"></head><body id="shroom-body"><div class="container">
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="fancy-goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+                
+                <radialGradient id="spiralGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:transparent"/>
+                    <stop offset="100%" style="stop-color:currentColor"/>
+                </radialGradient>
+            </defs>
+
+            <!-- Фоновая спираль -->
+            <g class="spiral" transform="translate(400, 300)">
+                <!-- Большая внешняя спираль -->
+                <path d="M 0,0 
+                         Q 50,0 100,50 
+                         Q 100,150 0,200 
+                         Q -200,200 -300,0 
+                         Q -300,-300 0,-400 
+                         Q 400,-400 600,0 
+                         Q 600,600 0,800" 
+                      stroke="currentColor" 
+                      stroke-width="15" 
+                      fill="none" 
+                      opacity="0.8"/>
+                      
+                <!-- Средняя спираль -->
+                <path d="M 0,0 
+                         Q -30,0 -60,-30 
+                         Q -60,-90 0,-120 
+                         Q 120,-120 180,0 
+                         Q 180,180 0,240 
+                         Q -240,240 -300,0 
+                         Q -300,-300 0,-360" 
+                      stroke="currentColor" 
+                      stroke-width="12" 
+                      fill="none" 
+                      opacity="0.6"/>
+                      
+                <!-- Внутренняя спираль -->
+                <path d="M 0,0 
+                         Q 25,0 50,25 
+                         Q 50,75 0,100 
+                         Q -100,100 -125,0 
+                         Q -125,-125 0,-150 
+                         Q 150,-150 175,0" 
+                      stroke="currentColor" 
+                      stroke-width="8" 
+                      fill="none" 
+                      opacity="0.4"/>
+            </g>
+
+            <!-- Основная группа с фильтром goo -->
+            <g filter="url(#fancy-goo)">
+                <!-- Центральный гриб -->
+                <g class="mushroom" transform="translate(400, 300)">
+                    <!-- Ножка гриба -->
+                    <ellipse cx="0" cy="40" rx="35" ry="80" fill="currentColor"/>
+                    
+                    <!-- Шляпка гриба -->
+                    <ellipse cx="0" cy="-30" rx="90" ry="55" fill="currentColor"/>
+                    
+                    <!-- Пятна на шляпке -->
+                    <circle cx="-35" cy="-40" r="12" fill="currentColor" opacity="0.7"/>
+                    <circle cx="30" cy="-35" r="10" fill="currentColor" opacity="0.7"/>
+                    <circle cx="0" cy="-50" r="8" fill="currentColor" opacity="0.7"/>
+                    <circle cx="-55" cy="-20" r="9" fill="currentColor" opacity="0.7"/>
+                    <circle cx="45" cy="-15" r="7" fill="currentColor" opacity="0.7"/>
+                    <circle cx="-15" cy="-25" r="6" fill="currentColor" opacity="0.7"/>
+                    <circle cx="15" cy="-45" r="5" fill="currentColor" opacity="0.7"/>
+                </g>
+
+                <!-- Летающие кружки -->
+                <g class="floating-circles" transform="translate(400, 300)">
+                    <g><circle class="circle circle1" r="25" fill="currentColor"/></g>
+                    <g><circle class="circle circle2" r="18" fill="currentColor"/></g>
+                    <g><circle class="circle circle3" r="30" fill="currentColor"/></g>
+                    <g><circle class="circle circle4" r="22" fill="currentColor"/></g>
+                    <g><circle class="circle circle5" r="20" fill="currentColor"/></g>
+                    <g><circle class="circle circle6" r="28" fill="currentColor"/></g>
+                    <g><circle class="circle circle7" r="24" fill="currentColor"/></g>
+                    <g><circle class="circle circle8" r="16" fill="currentColor"/></g>
+                </g>
+            </g>
+        </svg>
+    </div><script src="assets/js/jquery.min.js?h=6bcc3684f18aa21874fa709f122723cf"></script><script src="assets/bootstrap/js/bootstrap.min.js?h=2cf0875e1daf356bc4e64c053e7a4150"></script></body></html>
